@@ -1,10 +1,13 @@
-A = int(input()) #Ввод А
-B = int(input()) #Ввод B
+A = int(input("Введите число А: ")) #Ввод А
+B = int(input("Введите число В: ")) #Ввод B
 
+S = 0
+
+if A>B:
+    for i in range(B, A-1, -1):
+        print("Числа в прорядке убывания: ", i)
+    S += 1
+
+print("количество чисел: ", S)
 if A<B:
-    for i in range(A+1, B):
-        print(i)
-
-else:
-    for i in range(A-1, B, -1):
-        print(i)
+    print("A должно быть больше В (A>B)")
