@@ -2,7 +2,7 @@ a = []
 
 N = int(input("N:"))
 for i in range(N):
-    a.append(int(input(" : ")))
+    a.append(int(input("N: ")))
 
 Temp = (a[0] > 0)
 i = 1
