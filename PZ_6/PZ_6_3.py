@@ -1,0 +1,24 @@
+from math import sqrt
+
+N = 3
+
+a = [2, -5, 3]
+b = [-1, 3, 0]
+
+def da(x,y):
+    a = 0
+    b = 0
+    for i in x:
+        if i < 0 and i < a:
+            a = i
+        if all(i > 0 for i in x):
+            return "0 0"
+
+    for j in y:
+        if j > 0 and j > b:
+            b = j
+        if all(j < 0 for j in y):
+            return "0 0"
+    return a,b
+
+print(da(a, b))
