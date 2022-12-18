@@ -4,16 +4,16 @@
 
 def myFunction():
     import random  # импортируем библиотеку рандом
-    N = random.randrange(2,16) #количество цифр в списке
-    a = [random.randrange(1,20) for i in range(N)] #цифры в списке
+    N = random.randrange(2, 16) #количество цифр в списке
+    a = [random.randrange(1, 20) for i in range(N)] #цифры в списке
     b = []
 
-    print("N:",N)
-    print("Список a:\n",a)
+    print("N:", N)
+    print("Список a:\n", a)
 
     b = a[::2]
 
-    print("Размер масива b:\n",len(b)) #количество символов в cписке b
-    print("Список b:\n",b)
+    print("Размер масива b:\n", len(b)) #количество символов в cписке b
+    print("Список b:\n", b)
 
 myFunction()
