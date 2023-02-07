@@ -1,19 +1,15 @@
-import string
+punctuation = ".,;:!?"
 
-# читаем содержимое текстового файла
+# подсчитываем знаки препинания в файле
 with open("text18-26.txt", "r") as file:
-    text = file.read()
+    content = file.read()
+    punctuation_count = sum(char in punctuation for char in content)
 
-# считаем количество знаков препинания
-punctuation_count = sum(char in string.punctuation for char in text)
+# выводим содержимое файла и количество знаков препинания
+print("Содержимое файла:\n" + content)
+print("Количество знаков пунктуации:", punctuation_count)
 
-# Заменяем все знаки препинания на '/'
-new_text = text.translate(str.maketrans("", "", string.punctuation)).replace(" ", "/")
-
-# Записываем измененный текст в новый файл
-with open("new_file.txt", "w") as file:
-    file.write(new_text)
-
-# выводим содержимое текстового файла и количество знаков препинания
-print(text)
-print("количество знаков пунктуации:", punctuation_count)
+# заменяем знаки препинания на '/' и сохраняем в новый файл
+with open("text18-26_poetic.txt", "w") as file:
+    content = content.translate(str.maketrans(punctuation, "/" * len(punctuation)))
+    file.write(content)
