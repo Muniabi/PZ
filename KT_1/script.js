@@ -3,7 +3,7 @@ function calculateY(x) {
     return Math.pow(x, 2) + (2 * x) + 3;
 }
 
-// Пример использования функции
+// Пример
 var x = 5; // Задайте значение переменной x, для которого нужно вычислить Y
 var result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);
