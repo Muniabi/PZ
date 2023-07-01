@@ -5,12 +5,12 @@
     <title>Форма aform</title>
     <script>
         function showResult() {
-            var shape = document.getElementById("shape").value;
-            var color = document.getElementById("color").value;
-            var length = shape.length;
+            let figure = document.getElementById("figure").value;
+            let color = document.getElementById("color").value;
+            let length = figure.length;
 
-            var message = "Мне нравится " + shape + " цвета." + "\n";
-            message += "Длина " + shape + ": " + length;
+            let message = "Мне нравится " + figure + " " + color + " цвета." + "\n";
+            message += "Длина " + figure + ": " + length;
 
             alert(message);
         }
@@ -19,8 +19,8 @@
 
 <body>
     <form id="aform">
-        <label for="shape">Геометрическая фигура:</label>
-        <input type="text" id="shape" name="shape" required><br>
+        <label for="figure">Геометрическая фигура:</label>
+        <input type="text" id="figure" name="figure" required><br>
 
         <label for="color">Цвет:</label>
         <input type="text" id="color" name="color" required><br>

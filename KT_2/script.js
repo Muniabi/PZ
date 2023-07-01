@@ -8,6 +8,6 @@ function calculateY(x) {
 }
 
 // Пример
-var x = -8;
-var result = calculateY(x);
+let x = -8;
+let result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);

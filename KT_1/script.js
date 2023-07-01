@@ -4,6 +4,6 @@ function calculateY(x) {
 }
 
 // Пример
-var x = 5;
-var result = calculateY(x);
+let x = 5;
+let result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);
