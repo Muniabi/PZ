@@ -8,6 +8,6 @@ function calculateY(x) {
 }
 
 // Пример
-var x = -8; // Задайте значение переменной x, для которого нужно вычислить Y
+var x = -8;
 var result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);

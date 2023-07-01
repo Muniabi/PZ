@@ -4,6 +4,6 @@ function calculateY(x) {
 }
 
 // Пример
-var x = 5; // Задайте значение переменной x, для которого нужно вычислить Y
+var x = 5;
 var result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);
