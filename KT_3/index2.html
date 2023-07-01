@@ -31,7 +31,7 @@
 
 <body>
     <form>
-        <label for="name">Введите имя:</label>
+        <label for="name" onclick="showWarning();">Введите имя:</label>
         <input type="text" id="name" name="name" required><br>
 
         <label for="iceCream">Мороженое:</label>
@@ -40,7 +40,7 @@
         <label for="chocolate">Шоколад:</label>
         <input type="checkbox" id="chocolate" name="chocolate"><br>
 
-        <button type="button" onclick="showWarning(); showChoice(); showThanks();">Отправить</button>
+        <button type="button" onclick="showChoice(); showThanks();">Отправить</button>
     </form>
 </body>
 
