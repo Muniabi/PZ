@@ -10,6 +10,6 @@ function calculateY(x) {
 }
 
 // Пример
-var x = 2; // Задайте значение переменной x, для которого нужно вычислить Y
+var x = 2;
 var result = calculateY(x);
 console.log("Результат вычисления функции Y: " + result);
