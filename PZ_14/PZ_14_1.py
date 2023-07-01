@@ -1,5 +1,5 @@
-def find_dostoevsky_surnames(file_name):
-    with open("Dostoevsky.txt", 'r') as f:
+def find_dostoevsky_surnames(file_path):
+    with open(file_path, 'r') as f:
         text = f.read()
     dostoevsky_surnames = set()
     for word in text.split():
@@ -7,7 +7,8 @@ def find_dostoevsky_surnames(file_name):
             dostoevsky_surnames.add(word)
     return dostoevsky_surnames
 
-print(find_dostoevsky_surnames("Dostoevsky.txt"))
+file_path = "../PZ_14/Dostoevsky.txt"
+print(find_dostoevsky_surnames(file_path))
 
 #Этот код открывает файл Dostoevsky.txt и читает его содержимое.
 # Затем он разбивает текст на слова, используя split(), и перебирает каждое слово.
