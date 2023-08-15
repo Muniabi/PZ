@@ -6,12 +6,12 @@
     <script>
         function showWarning() {
             var name = document.getElementById("name").value;
-            alert("Внимательно вводите свое имя, " + name + "!");
+            alert("Внимательно вводите свое имя" + name + "!");
         }
 
         function showChoice() {
-            var iceCreamChecked = document.getElementById("iceCream").checked;
-            var chocolateChecked = document.getElementById("chocolate").checked;
+            let iceCreamChecked = document.getElementById("iceCream").checked;
+            let chocolateChecked = document.getElementById("chocolate").checked;
 
             if (iceCreamChecked && !chocolateChecked) {
                 alert("Вы выбрали мороженое!");
@@ -23,24 +23,29 @@
                 alert("Вы выбрали мороженое и шоколад!");
             }
         }
+
         function showThanks() {
             alert("Спасибо, что приняли участие в опросе!");
         }
+
+        let ice = "Вы выбрали мороженное"
+        let chocolat = "Вы выбрали шоколоад"
+
     </script>
 </head>
 
 <body>
     <form>
         <label for="name">Введите имя:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name" onclick="showWarning()" required><br>
 
-        <label for="iceCream">Мороженое:</label>
-        <input type="checkbox" id="iceCream" name="iceCream"><br>
+        <label for=" iceCream">Мороженое:</label>
+        <input type="checkbox" id="iceCream" name="iceCream" onclick="alert(ice);"><br>
 
         <label for="chocolate">Шоколад:</label>
-        <input type="checkbox" id="chocolate" name="chocolate"><br>
+        <input type="checkbox" id="chocolate" name="chocolate" onclick="alert(chocolat);"><br>
 
-        <button type="button" onclick="showWarning(); showChoice(); showThanks();">Отправить</button>
+        <button type="button" onclick="showChoice(); showThanks();">Отправить</button>
     </form>
 </body>
 
