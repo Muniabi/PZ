@@ -23,7 +23,7 @@ with sq.connect('dekanat.db') as con:
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         id_facultets INT NOT NULL,
-        FOREIGN KEY (id_facults) REFERENCES facults(id)
+        FOREIGN KEY (id_facultets) REFERENCES facultets(id)
     )
     """)
     con.commit()
@@ -70,7 +70,7 @@ with sq.connect('dekanat.db') as con:
         course_work BOOLEAN NOT NULL,
         FOREIGN KEY (spec_id) REFERENCES spec(id),
         FOREIGN KEY (subject_id) REFERENCES subject(id),
-        FOREIGN KEY (sub_form_id) REFERENCES sub_form(id)
+        FOREIGN KEY (form_s_id) REFERENCES form_s(id)
     )
     """)
     con.commit()
@@ -97,8 +97,8 @@ with sq.connect('dekanat.db') as con:
     cursor = con.cursor()
 
         # Заполнение факультетов
-    cursor.execute("""INSERT INTO facults VALUES (1, "Информационные технологии")""")
-    cursor.execute("""INSERT INTO facults VALUES (2, "Экономика")""")
+    cursor.execute("""INSERT INTO facultets VALUES (1, "Информационные технологии")""")
+    cursor.execute("""INSERT INTO facultets VALUES (2, "Экономика")""")
     con.commit()
 
         # Заполнение кафедр
@@ -136,11 +136,11 @@ with sq.connect('dekanat.db') as con:
     con.commit()
 
         # Заполнение формы сдачи предметов
-    cursor.execute("""INSERT INTO sub_form VALUES (1, "ЧТО? Что тут надо писать? Я не буду это заполнять")""")
+    cursor.execute("""INSERT INTO form_s VALUES (1, "ЧТО? Что тут надо писать? Я не буду это заполнять")""")
     con.commit()
 
         # Заполнение формы сдачи предметов
-    cursor.execute("""INSERT INTO curriculum VALUES (1, 0, 1, 0, 1, 0, лил, чич)""")
+    cursor.execute("""INSERT INTO plan VALUES (1, 0, 1, 0, 1, 0, 1, 0)""")
     con.commit()
 
         # Заполнение абитуриентов
